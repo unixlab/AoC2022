@@ -23,5 +23,5 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.Flags().BoolP("example", "e", false, "Use the example input")
+	rootCmd.PersistentFlags().BoolP("example", "e", false, "Use the example input")
 }
