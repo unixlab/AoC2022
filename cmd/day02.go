@@ -8,15 +8,15 @@ import (
 )
 
 // day02Cmd represents the day02 command
-var day02Cmd = &cobra.Command{
+var day02Cmd = &cobra.Command{t
 	Use: "day02",
 	Run: func(cmd *cobra.Command, args []string) {
 		example, err := cmd.Flags().GetBool("example")
 		if err != nil {
 			panic(err)
 		}
-		day02.RunPart1(aoeinput.Read(cmd.Use, example))
-		day02.RunPart2(aoeinput.Read(cmd.Use, example))
+		day02.RunPart1(cmd.Use, aoeinput.Read(cmd.Use, example))
+		day02.RunPart2(cmd.Use, aoeinput.Read(cmd.Use, example))
 	},
 }
 
