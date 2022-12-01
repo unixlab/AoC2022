@@ -15,8 +15,8 @@ var dayXXCmd = &cobra.Command{
 		if err != nil {
 			panic(err)
 		}
-		dayXX.RunPart1(aoeinput.Read(cmd.Use, example))
-		dayXX.RunPart2(aoeinput.Read(cmd.Use, example))
+		dayXX.RunPart1(cmd.Use, aoeinput.Read(cmd.Use, example))
+		dayXX.RunPart2(cmd.Use, aoeinput.Read(cmd.Use, example))
 	},
 }
 
