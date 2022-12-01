@@ -6,7 +6,7 @@ fmt:
 test:
 	go test -cover ./...
 lint:
-	docker run --rm -v $(shell pwd):/app -w /app golangci/golangci-lint:v1.50.1 golangci-lint run ./... -v -E revive -E govet -E misspell -E goimports -E gofmt -D errcheck --exclude-use-default=false
+	docker run --rm -v $(shell pwd):/app -w /app golangci/golangci-lint:v1.50.1 golangci-lint run ./... -E revive -E govet -E misspell -E goimports -E gofmt -D errcheck --exclude-use-default=false
 build:
 	CGO_ENABLED=0 \
 	go build \
