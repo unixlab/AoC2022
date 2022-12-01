@@ -1,4 +1,4 @@
-all: clean fmt test build
+all: clean fmt test lint build
 clean:
 	rm -f AoC2022
 fmt:
