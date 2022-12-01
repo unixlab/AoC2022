@@ -1,3 +1,4 @@
+// Package day01 is our package for first AoC day
 package day01
 
 import (
@@ -6,6 +7,7 @@ import (
 	"strconv"
 )
 
+// RunPart1 is for the first star of the day
 func RunPart1(day string, input []string) {
 	currentCalories := 0
 	maxCalories := 0
@@ -23,6 +25,7 @@ func RunPart1(day string, input []string) {
 	fmt.Printf("%s part 1 => %d\n", day, maxCalories)
 }
 
+// RunPart2 is for the second star of the day
 func RunPart2(day string, input []string) {
 	current := 0
 	var elfCalories []int

@@ -1,3 +1,4 @@
+// Package cmd is the viper root
 package cmd
 
 import (

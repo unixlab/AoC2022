@@ -1,3 +1,4 @@
+// Package aoeinput handles all the AoC input
 package aoeinput
 
 import (
@@ -6,6 +7,7 @@ import (
 	"strings"
 )
 
+// Read is our global function to read AoC input
 func Read(day string, example bool) []string {
 	var path strings.Builder
 	if example {
