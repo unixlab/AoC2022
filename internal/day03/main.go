@@ -1,4 +1,4 @@
-// Package day03 is our package for 3th AoC day
+// Package day03 is our package for the 3rd AoC day
 package day03
 
 import (

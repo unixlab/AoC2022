@@ -1,4 +1,4 @@
-// Package day01 is our package for first AoC day
+// Package day01 is our package for the 1st AoC day
 package day01
 
 import (

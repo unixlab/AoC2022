@@ -1,4 +1,4 @@
-// Package day02 is our package for second AoC day
+// Package day02 is our package for the 2nd AoC day
 package day02
 
 import (
