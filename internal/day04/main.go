@@ -22,16 +22,11 @@ func RunPart1(day string, input []string) {
 
 		if elf1min <= elf2min && elf1max >= elf2max {
 			fullyContainCounter++
+			continue
 		}
 
 		if elf2min <= elf1min && elf2max >= elf1max {
 			fullyContainCounter++
-		}
-
-		// for whatever reason if the area is the same they do not
-		// count as overlapping
-		if elf1min == elf2min && elf1max == elf2max {
-			fullyContainCounter--
 		}
 	}
 	fmt.Printf("%s part 1 => %d\n", day, fullyContainCounter)
@@ -67,7 +62,6 @@ func RunPart2(day string, input []string) {
 
 		if elf2max >= elf1min && elf2max <= elf1max {
 			totalOverlaps++
-			continue
 		}
 	}
 	fmt.Printf("%s part 2 => %d\n", day, totalOverlaps)
