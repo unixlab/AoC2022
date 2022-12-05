@@ -8,16 +8,17 @@ import (
 )
 
 // Read is our global function to read AoC input
-func Read(day string, example bool) []string {
-	var path strings.Builder
+func Read(path string, day string, example bool) []string {
+	var inputPath strings.Builder
+	inputPath.WriteString(path)
 	if example {
-		path.WriteString("examples")
+		inputPath.WriteString("examples")
 	} else {
-		path.WriteString("inputs")
+		inputPath.WriteString("inputs")
 	}
-	path.WriteString("/")
-	path.WriteString(day)
-	file, err := os.Open(path.String())
+	inputPath.WriteString("/")
+	inputPath.WriteString(day)
+	file, err := os.Open(inputPath.String())
 	if err != nil {
 		panic(err)
 	}

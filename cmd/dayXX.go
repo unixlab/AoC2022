@@ -17,7 +17,7 @@ var dayXXCmd = &cobra.Command{
 		if err != nil {
 			panic(err)
 		}
-		input := aoeinput.Read(cmd.Use, example)
+		input := aoeinput.Read("", cmd.Use, example)
 		fmt.Printf("dayXX part 1 => %d\n", dayXX.RunPart1(input))
 		fmt.Printf("dayXX part 2 => %d\n", dayXX.RunPart2(input))
 	},
