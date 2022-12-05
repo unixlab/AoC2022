@@ -11,3 +11,6 @@ build:
 	CGO_ENABLED=0 \
 	go build \
 	-o AoC2022
+cover:
+	go test -coverprofile=/tmp/AoC2022.cover.out ./...
+	go tool cover -html=/tmp/AoC2022.cover.out
