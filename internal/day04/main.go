@@ -2,13 +2,12 @@
 package day04
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
 
 // RunPart1 is for the first star of the day
-func RunPart1(day string, input []string) {
+func RunPart1(input []string) int {
 	fullyContainCounter := 0
 	for _, line := range input {
 		assignments := strings.Split(line, ",")
@@ -29,11 +28,11 @@ func RunPart1(day string, input []string) {
 			fullyContainCounter++
 		}
 	}
-	fmt.Printf("%s part 1 => %d\n", day, fullyContainCounter)
+	return fullyContainCounter
 }
 
 // RunPart2 is for the second star of the day
-func RunPart2(day string, input []string) {
+func RunPart2(input []string) int {
 	totalOverlaps := 0
 	for _, line := range input {
 		assignments := strings.Split(line, ",")
@@ -64,5 +63,5 @@ func RunPart2(day string, input []string) {
 			totalOverlaps++
 		}
 	}
-	fmt.Printf("%s part 2 => %d\n", day, totalOverlaps)
+	return totalOverlaps
 }

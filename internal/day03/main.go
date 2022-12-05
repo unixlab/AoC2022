@@ -2,7 +2,6 @@
 package day03
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -36,7 +35,7 @@ func getCommonChars(str1 string, str2 string) []rune {
 }
 
 // RunPart1 is for the first star of the day
-func RunPart1(day string, input []string) {
+func RunPart1(input []string) int {
 	sum := 0
 	for _, line := range input {
 		indexHalf := len(line) / 2
@@ -47,11 +46,11 @@ func RunPart1(day string, input []string) {
 		}
 		sum += charNumber
 	}
-	fmt.Printf("%s part 1 => %d\n", day, sum)
+	return sum
 }
 
 // RunPart2 is for the second star of the day
-func RunPart2(day string, input []string) {
+func RunPart2(input []string) int {
 	sum := 0
 	var lines []string
 	for _, line := range input {
@@ -72,5 +71,5 @@ func RunPart2(day string, input []string) {
 			lines = []string{}
 		}
 	}
-	fmt.Printf("%s part 2 => %d\n", day, sum)
+	return sum
 }

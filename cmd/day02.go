@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/spf13/cobra"
 
 	"github.com/unixlab/AoC2022/internal/aoeinput"
@@ -15,8 +17,9 @@ var day02Cmd = &cobra.Command{
 		if err != nil {
 			panic(err)
 		}
-		day02.RunPart1(cmd.Use, aoeinput.Read(cmd.Use, example))
-		day02.RunPart2(cmd.Use, aoeinput.Read(cmd.Use, example))
+		input := aoeinput.Read(cmd.Use, example)
+		fmt.Printf("day02 part 1 => %d\n", day02.RunPart1(input))
+		fmt.Printf("day02 part 2 => %d\n", day02.RunPart2(input))
 	},
 }
 

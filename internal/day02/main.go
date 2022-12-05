@@ -2,7 +2,6 @@
 package day02
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -17,7 +16,7 @@ const (
 )
 
 // RunPart1 is for the first star of the day
-func RunPart1(day string, input []string) {
+func RunPart1(input []string) int {
 	score := 0
 	for _, line := range input {
 		actions := strings.Split(line, " ")
@@ -68,11 +67,11 @@ func RunPart1(day string, input []string) {
 			panic("unknown action")
 		}
 	}
-	fmt.Printf("%s part 1 => %d\n", day, score)
+	return score
 }
 
 // RunPart2 is for the second star of the day
-func RunPart2(day string, input []string) {
+func RunPart2(input []string) int {
 	score := 0
 	for _, line := range input {
 		actions := strings.Split(line, " ")
@@ -123,5 +122,5 @@ func RunPart2(day string, input []string) {
 			panic("unknown action")
 		}
 	}
-	fmt.Printf("%s part 2 => %d\n", day, score)
+	return score
 }

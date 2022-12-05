@@ -4,17 +4,17 @@ package dayXX
 import "fmt"
 
 // RunPart1 is for the first star of the day
-func RunPart1(day string, input []string) {
+func RunPart1(input []string) int {
 	for _, line := range input {
 		fmt.Println(line)
 	}
-	fmt.Printf("%s part 1 => %d\n", day, 0)
+	return 0
 }
 
 // RunPart2 is for the second star of the day
-func RunPart2(day string, input []string) {
+func RunPart2(input []string) int {
 	for _, line := range input {
 		fmt.Println(line)
 	}
-	fmt.Printf("%s part 2 => %d\n", day, 0)
+	return 0
 }
