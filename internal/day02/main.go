@@ -32,8 +32,6 @@ func RunPart1(input []string) int {
 			case "Z":
 				score += Scissors
 				score += Loose
-			default:
-				panic("unknown action")
 			}
 		case "B":
 			switch actions[1] {
@@ -46,8 +44,6 @@ func RunPart1(input []string) int {
 			case "Z":
 				score += Scissors
 				score += Win
-			default:
-				panic("unknown action")
 			}
 		case "C":
 			switch actions[1] {
@@ -60,11 +56,7 @@ func RunPart1(input []string) int {
 			case "Z":
 				score += Scissors
 				score += Draw
-			default:
-				panic("unknown action")
 			}
-		default:
-			panic("unknown action")
 		}
 	}
 	return score
@@ -87,8 +79,6 @@ func RunPart2(input []string) int {
 			case "Z":
 				score += Win
 				score += Paper
-			default:
-				panic("unknown action")
 			}
 		case "B":
 			switch actions[1] {
@@ -101,8 +91,6 @@ func RunPart2(input []string) int {
 			case "Z":
 				score += Win
 				score += Scissors
-			default:
-				panic("unknown action")
 			}
 		case "C":
 			switch actions[1] {
@@ -115,11 +103,7 @@ func RunPart2(input []string) int {
 			case "Z":
 				score += Win
 				score += Rock
-			default:
-				panic("unknown action")
 			}
-		default:
-			panic("unknown action")
 		}
 	}
 	return score

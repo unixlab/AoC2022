@@ -41,9 +41,6 @@ func RunPart1(input []string) int {
 		indexHalf := len(line) / 2
 		commonChar := getCommonChars(line[:indexHalf], line[indexHalf:])[0]
 		charNumber := getCharNumber(commonChar)
-		if charNumber == -5 {
-			panic("char to number conversion error")
-		}
 		sum += charNumber
 	}
 	return sum

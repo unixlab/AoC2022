@@ -56,11 +56,6 @@ func RunPart2(input []string) int {
 
 		if elf2min >= elf1min && elf2min <= elf1max {
 			totalOverlaps++
-			continue
-		}
-
-		if elf2max >= elf1min && elf2max <= elf1max {
-			totalOverlaps++
 		}
 	}
 	return totalOverlaps
