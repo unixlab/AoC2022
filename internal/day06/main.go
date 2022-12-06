@@ -1,7 +1,8 @@
 // Package day06 is our package for the 6th AoC day
 package day06
 
-func allCharsUniq(input string) bool {
+// allCharsUnique checks if all characters (a-z) in the input are unique
+func allCharsUnique(input string) bool {
 	var store uint32
 	for _, char := range input {
 		charNumber := char - 97
@@ -13,10 +14,10 @@ func allCharsUniq(input string) bool {
 	return true
 }
 
-// Run is for both stars of the day
+// Run takes the window size and those can be used for both parts
 func Run(input string, window int) int {
 	for index := 0; index < len(input)-window; index++ {
-		if allCharsUniq(input[index : index+window]) {
+		if allCharsUnique(input[index : index+window]) {
 			return index + window
 		}
 	}
