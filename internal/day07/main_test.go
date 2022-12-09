@@ -37,3 +37,11 @@ func TestRunPart2(t *testing.T) {
 		t.Fatalf("RunPart2() = expected %v, got %v", expectedResult, actualResult)
 	}
 }
+
+func TestRunPart2EmptyInput(t *testing.T) {
+	expectedResult := 0
+	actualResult := RunPart2([]string{"cd /"})
+	if actualResult != expectedResult {
+		t.Fatalf("RunPart2() = expected %v, got %v", expectedResult, actualResult)
+	}
+}

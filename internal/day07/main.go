@@ -69,10 +69,12 @@ func RunPart2(input []string) int {
 		sizes = append(sizes, dirSize)
 	}
 	sort.Ints(sizes)
+	bestMatchingFolderSize := 0
 	for _, size := range sizes {
 		if size >= spaceNeeded {
-			return size
+			bestMatchingFolderSize = size
+			break
 		}
 	}
-	return 0
+	return bestMatchingFolderSize
 }
