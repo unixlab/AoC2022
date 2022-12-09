@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-lastDay=$(find cmd -name "day*.go" | grep -v XX | sort -n | tail -1 | sed 's#cmd/day##' | sed 's/.go//g')
+lastDay=$(find cmd -name "day*.go" | grep -v XX | sort -n | tail -1 | sed 's#cmd/day##' | sed 's/.go//g' | tr -d '0')
 nextDay=$((lastDay+1))
 nextDayLeadingZero=$(printf "day%02d" $nextDay)
 
