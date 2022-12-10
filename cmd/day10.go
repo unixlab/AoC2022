@@ -17,8 +17,12 @@ var day10Cmd = &cobra.Command{
 		if err != nil {
 			panic(err)
 		}
+		color, err := cmd.Flags().GetBool("color")
+		if err != nil {
+			panic(err)
+		}
 		input := aoeinput.Read("", cmd.Use, example)
-		part1, part2 := day10.Run(input, true)
+		part1, part2 := day10.Run(input, color)
 		fmt.Printf("day10 part 1 => %d\n", part1)
 		fmt.Printf("day10 part 2 => \n%s", part2)
 	},
@@ -26,4 +30,5 @@ var day10Cmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(day10Cmd)
+	day10Cmd.Flags().Bool("color", true, "Colorize output")
 }
