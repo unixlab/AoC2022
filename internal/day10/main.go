@@ -9,6 +9,7 @@ import (
 	"github.com/fatih/color"
 )
 
+// Instruction struct for parsed instructions
 type Instruction struct {
 	Cycles int
 	Value  int
