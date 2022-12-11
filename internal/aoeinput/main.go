@@ -20,7 +20,7 @@ func Read(path string, day string, example bool) []string {
 	inputPath.WriteString(day)
 	file, err := os.Open(inputPath.String())
 	if err != nil {
-		panic(err)
+		return []string{"error while reading input"}
 	}
 	scanner := bufio.NewScanner(file)
 	var lines []string
