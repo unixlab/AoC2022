@@ -3,6 +3,7 @@ module github.com/unixlab/AoC2022
 go 1.19
 
 require (
+	github.com/RyanCarrier/dijkstra v1.1.0
 	github.com/fatih/color v1.13.0
 	github.com/spf13/cobra v1.6.1
 )
