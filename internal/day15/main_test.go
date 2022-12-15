@@ -39,7 +39,7 @@ func TestRunPart2ExampleNoFree(t *testing.T) {
 }
 
 func TestRunPart2(t *testing.T) {
-	expectedResult := -1
+	expectedResult := 12817603219131
 	actualResult := RunPart2(aoeinput.Read("../../", "day15", false), false)
 	if actualResult != expectedResult {
 		t.Fatalf("RunPart2() = expected %v, got %v", expectedResult, actualResult)
